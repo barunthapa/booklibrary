@@ -1,0 +1,11 @@
+<%= form_for @book do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %> </br></br>
+  <%= f.label :isbn %>
+  <%= f.text_field :isbn %> </br></br>
+  <%= f.label :author %>
+  <%= f.text_field :author %></br></br>
+  <%= f.label :price %>
+  <%= f.text_field :price %> </br></br>
+  <%= f.submit "Add Books" %>
+<% end %>
