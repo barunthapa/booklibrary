@@ -1,2 +1,8 @@
-<h1>Categories#edit</h1>
-<p>Find me in app/views/categories/edit.html.erb</p>
+<div id="main_container">
+<h1>Edit Categories</h1>
+<%= form_for @category do |p| %>
+  <%= p.label :name %>
+  <%= p.text_field :name %>
+  <%= p.submit "Update" %>
+<% end %>
+</div>

@@ -11,3 +11,118 @@
  *= require_self
  *= require_tree .
  */
+body{
+	width: 80%;
+	min-height: 70px;
+	padding: 5px;
+	margin: auto;
+	background: #E8DCC8;
+	-moz-box-shadow: 0px 0px 10px black;
+	-webkit-box-shadow: 0px 0px 10px black;
+	box-shadow: 0px 0px 10px black;
+
+}
+
+header{
+	margin: auto;
+	padding: 5px;
+	height: 120px;
+	background: #2C5E26;
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+
+div#main_container{
+	margin-top: 5px;
+	padding: 10px;
+	background: #fff;
+}
+
+a{
+  text-decoration: none;
+}
+
+table a{
+  color: black;
+}
+
+table a:hover{
+  color: white;
+  background-color: #2C5E26;
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+section#category_list{
+	min-height: 400px;
+	color: black;
+
+}
+section#add{
+  width:200px;
+  height: 30px;
+  margin-left: 30px;
+  background-color: #2C5E26;
+  padding:10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  -moz-box-shadow: 2px 2px 2px black;
+  -webkit-box-shadow: 2px 2px 2px black;
+  box-shadow: 2px 2px 2px black;
+}
+section#add a{
+  text-decoration: none;
+  color: white;
+}
+
+section#add:hover{
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+table{
+	width: auto;
+	border-spacing:0;
+  border-collapse:collapse;
+}
+
+tr:nth-child(odd)		{ background-color:#eee; }
+tr:nth-child(even)		{ background-color:#ddd; }
+
+th{
+	height: 34px;
+  padding-left: 5px;
+	background-color: #F2EDE1;
+  text-align: left;
+
+}
+
+td{
+	height: 30px;
+  width:60px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+td.c_name{
+  width: 200px;
+  height: 30px;
+  text-align: left;
+  padding-left: 5px;
+}
+
+li{
+  height: 24px;
+  width: auto;
+  padding: 5px;
+  background-color: #ddd;
+  color: black;
+}
+
+li span{
+  margin-left: 40px;
+}

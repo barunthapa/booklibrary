@@ -5,13 +5,15 @@ class BooksController < ApplicationController
   end
 
   def new
-    @book = Book.new
+    @category=Category.find(params[:category_id])
+    @book = @category.book.new
   end
 
   def create
+    @category=Category.find(params[:category_id])
     @book = Book.new(params[:book])
     @book.save!
-    redirect_to books_path
+    redirect_to category_path
   end
 
   def show

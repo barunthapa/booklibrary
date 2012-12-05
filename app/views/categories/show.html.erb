@@ -1,5 +1,13 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
+<div id="main_container">
 
-<%= link_to "View book index", category_book_path(@category.id)%>
-<%= link_to "Add Books", new_category_book_path(@category.id)%>
+  <h1>Category: <%= @category.name %></h1>
+  <ul>
+   <% @category.books.each do |book|%>
+   <li><%= book.title %><span><%= link_to " Details", category_book_path(@category.id, book.id)%></span></li>
+   <% end %>
+ </ul>
+
+ <section id="add">
+  <%= link_to "Add Books", new_category_book_path(@category.id)%>
+</section>
+</div>
