@@ -3,7 +3,7 @@
   <h1>Category: <%= @category.name %></h1>
   <ul>
    <% @category.books.each do |book|%>
-   <li><%= book.title %><span><%= link_to " Details", category_book_path(@category.id, book.id)%></span></li>
+   <li><%= book.title %><span><%= link_to " Details", category_book_path(@category.id, book.id)%></span>|<%= link_to " Edit", edit_category_book_path(@category.id, book.id)%></span>|<%= link_to " Delete",category_book_path(@category.id, book.id), :method => :delete, :confirm => "This book will be deleted, are you sure?"%></li>
    <% end %>
  </ul>
 

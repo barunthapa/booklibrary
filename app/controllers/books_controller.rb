@@ -6,14 +6,17 @@ class BooksController < ApplicationController
 
   def new
     @category=Category.find(params[:category_id])
-    @book = @category.book.new
+    @book = @category.books.new
   end
 
   def create
-    @category=Category.find(params[:category_id])
-    @book = Book.new(params[:book])
-    @book.save!
-    redirect_to category_path
+    @category = Category.find(params[:category_id])
+    @book = @category.books.new(params[:book])
+    if @book.save
+      redirect_to category_path(@category.id)
+    else
+      render "new"
+    end
   end
 
   def show
@@ -22,16 +25,22 @@ class BooksController < ApplicationController
   end
 
   def edit
-     @book = Book.find(params[:id])
+    @category=Category.find(params[:category_id])
+     @book = @category.books.find(params[:id])
 
   end
 
   def update
+     @category = Category.find(params[:category_id])
+    @book = @category.books.find(params[:id])
+    @book.update_attributes(params[:book])
+    redirect_to category_path(@category.id)
   end
 
   def destroy
-    @book = Book.find(params[:id])
+     @category = Category.find(params[:category_id])
+    @book = @category.books.find(params[:id])
     @book.destroy
-    redirect_to books_path
+    redirect_to category_path(@category.id)
   end
 end
