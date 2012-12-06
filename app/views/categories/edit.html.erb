@@ -1,8 +1,13 @@
 <div id="main_container">
-<h1>Edit Categories</h1>
-<%= form_for @category do |p| %>
-  <%= p.label :name %>
-  <%= p.text_field :name %>
-  <%= p.submit "Update" %>
-<% end %>
+	<h1>Edit Categories</h1>
+	<%= form_for @category do |p| %>
+    <%= p.label :name %>
+    <%= p.text_field :name %>
+    <%= p.submit "Update" %>
+  <% end %>
+
+ <section id="add">
+   <%= link_to "Back", :back %>
+ </section>
+
 </div>
